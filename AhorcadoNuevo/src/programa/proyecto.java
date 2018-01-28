@@ -1,5 +1,5 @@
 	/*****
-     *  ___________.__       _____   .__                                         .___        
+	 *  ___________.__       _____   .__                                         .___        
 	 *	\_   _____/|  |     /  _  \  |  |__    ____  _______   ____  _____     __| _/  ____  
 	 *	 |    __)_ |  |    /  /_\  \ |  |  \  /  _ \ \_  __ \_/ ___\ \__  \   / __ |  /  _ \ 
 	 *	 |        \|  |__ /    |    \|   Y  \(  <_> ) |  | \/\  \___  / __ \_/ /_/ | (  <_> )
@@ -7,7 +7,7 @@
 	 *	        \/                \/      \/                      \/      \/      \/         
 	 * 	
 	 * 	Proyecto de Programación 2ºTrimestre 1ºDAM
-	 * 	IES Jovellanos Fuenlabrada
+	 * 	IES Gaspar Melchor de Jovellanos Fuenlabrada
 	 * 
 	 * 	Creado por:
 	 * 
