@@ -96,7 +96,7 @@ public class Palabra {
 		
 		principal.escribeTerminal("\nIntroduce una letra: ");
 		boolean ejecutar = false;
-		char letraElegidaPorUsuario = principal.leerLetra();
+		char letraElegidaPorUsuario;
 		do {
 			letraElegidaPorUsuario = principal.leerLetra();
 			
