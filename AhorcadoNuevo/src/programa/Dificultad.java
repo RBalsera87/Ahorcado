@@ -33,7 +33,7 @@ public class Dificultad {
 
 		while (repetir == true) {
 
-			char dificultad = Principal.leerLetra();
+			char dificultad = Principal.getLetraPulsada();
 
 			
 			switch (dificultad) {

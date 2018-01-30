@@ -98,7 +98,7 @@ public class Palabra {
 		boolean ejecutar = false;
 		char letraElegidaPorUsuario;
 		do {
-			letraElegidaPorUsuario = Principal.leerLetra();
+			letraElegidaPorUsuario = Principal.getLetraPulsada();
 			
 			for (int i=0; i<letrasUsadas.length();i++) {
 				

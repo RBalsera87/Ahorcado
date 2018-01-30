@@ -1062,7 +1062,7 @@ public class Principal extends JFrame {
 		
 	}
 	
-	public static char leerLetra() {
+	public static char getLetraPulsada() {
 		char pulsada = letrapulsada;
 		letrapulsada = ' ';
 		System.out.println(pulsada);

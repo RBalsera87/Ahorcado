@@ -85,7 +85,7 @@ public class Vidas {
 								  + "\nศอออออออออออออออออออออออออออออออออออออออผ\n");
 			
 			Principal.muestraPantalla(99);
-			while (Principal.leerLetra() != '\n') {
+			while (Principal.getLetraPulsada() != '\n') {
 			
 				Principal.escribeTerminal("");
 			}
@@ -127,7 +127,7 @@ public class Vidas {
 								  + "\nศอออออออออออออออออออออออออออออออออออออออผ\n");
 
 			Principal.muestraPantalla(98);
-				while (Principal.leerLetra() != '\n') {
+				while (Principal.getLetraPulsada() != '\n') {
 			
 			Principal.escribeTerminal("");
 			}
