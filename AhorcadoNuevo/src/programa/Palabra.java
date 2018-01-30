@@ -2,7 +2,7 @@ package programa;
 
 import java.util.Random;
 
-import interfaz.principal;
+import interfaz.Principal;
 
 /**
  * 	Clase con los m้todos para el control de
@@ -31,17 +31,17 @@ public class Palabra {
 	
 	public static void muestraLetras(char[] palabraDefragmentada) {
 		
-		principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
-		principal.escribeTerminal("      Este password tiene " + palabraDefragmentada.length + " letras\n");
-		principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
+		Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
+		Principal.escribeTerminal("      Este password tiene " + palabraDefragmentada.length + " letras\n");
+		Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
 		
 		for (int i = 0; i < palabraDefragmentada.length; i++) {
 			
-			principal.escribeTerminal(palabraDefragmentada[i] + " ");
+			Principal.escribeTerminal(palabraDefragmentada[i] + " ");
 			
 		}
 		
-		principal.escribeTerminal("\n");
+		Principal.escribeTerminal("\n");
 		
 	}
 	
@@ -94,17 +94,17 @@ public class Palabra {
 	
 	public static char introducirLetra(String letrasUsadas) {
 		
-		principal.escribeTerminal("\nIntroduce una letra: ");
+		Principal.escribeTerminal("\nIntroduce una letra: ");
 		boolean ejecutar = false;
 		char letraElegidaPorUsuario;
 		do {
-			letraElegidaPorUsuario = principal.leerLetra();
+			letraElegidaPorUsuario = Principal.leerLetra();
 			
 			for (int i=0; i<letrasUsadas.length();i++) {
 				
 				if (letraElegidaPorUsuario == letrasUsadas.charAt(i)) {
 					
-					principal.escribeTerminal("\nYa has usado esta letra, \nescoge otra por favor: ");
+					Principal.escribeTerminal("\nYa has usado esta letra, \nescoge otra por favor: ");
 					letraElegidaPorUsuario = ' ';
 				}
 			}			

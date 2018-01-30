@@ -29,7 +29,7 @@ import java.awt.event.KeyAdapter;
  */
 
 @SuppressWarnings("serial")
-public class principal extends JFrame {
+public class Principal extends JFrame {
 	
 	private static char letrapulsada = ' ';
 	private static JTextArea Terminal = new JTextArea();
@@ -44,7 +44,7 @@ public class principal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					principal frame = new principal();
+					Principal frame = new Principal();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class principal extends JFrame {
 	 *  CreaciÛn de la ventana principal.
 	 */
 	
-	public principal() throws InterruptedException, FontFormatException {
+	public Principal() throws InterruptedException, FontFormatException {
 		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,9 +86,9 @@ public class principal extends JFrame {
 		teclaQ.setMinimumSize(new Dimension(26, 26));
 		teclaQ.setMaximumSize(new Dimension(26, 26));
 		teclaQ.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaQ.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/Q_pressed.png")));
+		teclaQ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Q_pressed.png")));
 		teclaQ.setOpaque(false);
-		teclaQ.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaQ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaQ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaQ.setBounds(88, 530, 24, 28);
 		teclaQ.addActionListener(new ActionListener() {
@@ -112,9 +112,9 @@ public class principal extends JFrame {
 		teclaW.setMinimumSize(new Dimension(26, 26));
 		teclaW.setMaximumSize(new Dimension(26, 26));
 		teclaW.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaW.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/W_pressed.png")));
+		teclaW.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/W_pressed.png")));
 		teclaW.setOpaque(false);
-		teclaW.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaW.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaW.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaW.setBounds(114, 530, 24, 28);
 		teclaW.addActionListener(new ActionListener() {
@@ -138,9 +138,9 @@ public class principal extends JFrame {
 		teclaE.setMinimumSize(new Dimension(26, 26));
 		teclaE.setMaximumSize(new Dimension(26, 26));
 		teclaE.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaE.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/E_pressed.png")));
+		teclaE.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/E_pressed.png")));
 		teclaE.setOpaque(false);
-		teclaE.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaE.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaE.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaE.setBounds(139, 530, 24, 28);
 		teclaE.addActionListener(new ActionListener() {
@@ -164,9 +164,9 @@ public class principal extends JFrame {
 		teclaR.setMinimumSize(new Dimension(26, 26));
 		teclaR.setMaximumSize(new Dimension(26, 26));
 		teclaR.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaR.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/R_pressed.png")));
+		teclaR.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/R_pressed.png")));
 		teclaR.setOpaque(false);
-		teclaR.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaR.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaR.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaR.setBounds(165, 530, 24, 28);
 		teclaR.addActionListener(new ActionListener() {
@@ -190,9 +190,9 @@ public class principal extends JFrame {
 		teclaT.setMinimumSize(new Dimension(26, 26));
 		teclaT.setMaximumSize(new Dimension(26, 26));
 		teclaT.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaT.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/T_pressed.png")));
+		teclaT.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/T_pressed.png")));
 		teclaT.setOpaque(false);
-		teclaT.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaT.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaT.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaT.setBounds(190, 530, 24, 28);
 		teclaT.addActionListener(new ActionListener() {
@@ -216,9 +216,9 @@ public class principal extends JFrame {
 		teclaY.setMinimumSize(new Dimension(26, 26));
 		teclaY.setMaximumSize(new Dimension(26, 26));
 		teclaY.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaY.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/Y_pressed.png")));
+		teclaY.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Y_pressed.png")));
 		teclaY.setOpaque(false);
-		teclaY.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaY.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaY.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaY.setBounds(216, 530, 24, 28);
 		teclaY.addActionListener(new ActionListener() {
@@ -242,9 +242,9 @@ public class principal extends JFrame {
 		teclaU.setMinimumSize(new Dimension(26, 26));
 		teclaU.setMaximumSize(new Dimension(26, 26));
 		teclaU.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaU.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/U_pressed.png")));
+		teclaU.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/U_pressed.png")));
 		teclaU.setOpaque(false);
-		teclaU.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaU.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaU.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaU.setBounds(242, 530, 24, 28);
 		teclaU.addActionListener(new ActionListener() {
@@ -268,9 +268,9 @@ public class principal extends JFrame {
 		teclaI.setMinimumSize(new Dimension(26, 26));
 		teclaI.setMaximumSize(new Dimension(26, 26));
 		teclaI.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaI.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/I_pressed.png")));
+		teclaI.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/I_pressed.png")));
 		teclaI.setOpaque(false);
-		teclaI.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaI.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaI.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaI.setBounds(267, 530, 24, 28);
 		teclaI.addActionListener(new ActionListener() {
@@ -294,9 +294,9 @@ public class principal extends JFrame {
 		teclaO.setMinimumSize(new Dimension(26, 26));
 		teclaO.setMaximumSize(new Dimension(26, 26));
 		teclaO.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaO.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/O_pressed.png")));
+		teclaO.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/O_pressed.png")));
 		teclaO.setOpaque(false);
-		teclaO.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaO.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaO.setBounds(292, 530, 24, 28);
 		teclaO.addActionListener(new ActionListener() {
@@ -320,9 +320,9 @@ public class principal extends JFrame {
 		teclaP.setMinimumSize(new Dimension(26, 26));
 		teclaP.setMaximumSize(new Dimension(26, 26));
 		teclaP.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaP.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/P_pressed.png")));
+		teclaP.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/P_pressed.png")));
 		teclaP.setOpaque(false);
-		teclaP.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaP.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaP.setBounds(318, 530, 24, 28);
 		teclaP.addActionListener(new ActionListener() {
@@ -346,9 +346,9 @@ public class principal extends JFrame {
 		teclaA.setMinimumSize(new Dimension(26, 26));
 		teclaA.setMaximumSize(new Dimension(26, 26));
 		teclaA.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaA.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/A_pressed.png")));
+		teclaA.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/A_pressed.png")));
 		teclaA.setOpaque(false);
-		teclaA.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaA.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaA.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaA.setBounds(95, 554, 24, 28);
 		teclaA.addActionListener(new ActionListener() {
@@ -372,9 +372,9 @@ public class principal extends JFrame {
 		teclaS.setMinimumSize(new Dimension(26, 26));
 		teclaS.setMaximumSize(new Dimension(26, 26));
 		teclaS.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaS.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/S_pressed.png")));
+		teclaS.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/S_pressed.png")));
 		teclaS.setOpaque(false);
-		teclaS.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaS.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaS.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaS.setBounds(121, 554, 24, 28);
 		teclaS.addActionListener(new ActionListener() {
@@ -398,9 +398,9 @@ public class principal extends JFrame {
 		teclaD.setMinimumSize(new Dimension(26, 26));
 		teclaD.setMaximumSize(new Dimension(26, 26));
 		teclaD.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaD.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/D_pressed.png")));
+		teclaD.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/D_pressed.png")));
 		teclaD.setOpaque(false);
-		teclaD.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaD.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaD.setBounds(146, 554, 24, 28);
 		teclaD.addActionListener(new ActionListener() {
@@ -424,9 +424,9 @@ public class principal extends JFrame {
 		teclaF.setMinimumSize(new Dimension(26, 26));
 		teclaF.setMaximumSize(new Dimension(26, 26));
 		teclaF.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaF.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/F_pressed.png")));
+		teclaF.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F_pressed.png")));
 		teclaF.setOpaque(false);
-		teclaF.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaF.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaF.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaF.setBounds(172, 554, 24, 28);
 		teclaF.addActionListener(new ActionListener() {
@@ -450,9 +450,9 @@ public class principal extends JFrame {
 		teclaG.setMinimumSize(new Dimension(26, 26));
 		teclaG.setMaximumSize(new Dimension(26, 26));
 		teclaG.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaG.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/G_pressed.png")));
+		teclaG.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/G_pressed.png")));
 		teclaG.setOpaque(false);
-		teclaG.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaG.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaG.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaG.setBounds(197, 554, 24, 28);
 		teclaG.addActionListener(new ActionListener() {
@@ -476,9 +476,9 @@ public class principal extends JFrame {
 		teclaH.setMinimumSize(new Dimension(26, 26));
 		teclaH.setMaximumSize(new Dimension(26, 26));
 		teclaH.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaH.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/H_pressed.png")));
+		teclaH.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/H_pressed.png")));
 		teclaH.setOpaque(false);
-		teclaH.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaH.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaH.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaH.setBounds(223, 554, 24, 28);
 		teclaH.addActionListener(new ActionListener() {
@@ -502,9 +502,9 @@ public class principal extends JFrame {
 		teclaJ.setMinimumSize(new Dimension(26, 26));
 		teclaJ.setMaximumSize(new Dimension(26, 26));
 		teclaJ.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaJ.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/J_pressed.png")));
+		teclaJ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/J_pressed.png")));
 		teclaJ.setOpaque(false);
-		teclaJ.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaJ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaJ.setBounds(249, 554, 24, 28);
 		teclaJ.addActionListener(new ActionListener() {
@@ -528,9 +528,9 @@ public class principal extends JFrame {
 		teclaK.setMinimumSize(new Dimension(26, 26));
 		teclaK.setMaximumSize(new Dimension(26, 26));
 		teclaK.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaK.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/K_pressed.png")));
+		teclaK.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/K_pressed.png")));
 		teclaK.setOpaque(false);
-		teclaK.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaK.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaK.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaK.setBounds(274, 554, 24, 28);
 		teclaK.addActionListener(new ActionListener() {
@@ -554,9 +554,9 @@ public class principal extends JFrame {
 		teclaL.setMinimumSize(new Dimension(26, 26));
 		teclaL.setMaximumSize(new Dimension(26, 26));
 		teclaL.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaL.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/L_pressed.png")));
+		teclaL.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/L_pressed.png")));
 		teclaL.setOpaque(false);
-		teclaL.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaL.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaL.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaL.setBounds(300, 554, 24, 28);
 		teclaL.addActionListener(new ActionListener() {
@@ -580,9 +580,9 @@ public class principal extends JFrame {
 		tecla—.setMinimumSize(new Dimension(26, 26));
 		tecla—.setMaximumSize(new Dimension(26, 26));
 		tecla—.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		tecla—.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/—_pressed.png")));
+		tecla—.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/—_pressed.png")));
 		tecla—.setOpaque(false);
-		tecla—.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		tecla—.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		tecla—.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		tecla—.setBounds(325, 554, 24, 28);
 		tecla—.addActionListener(new ActionListener() {
@@ -606,9 +606,9 @@ public class principal extends JFrame {
 		teclaZ.setMinimumSize(new Dimension(26, 26));
 		teclaZ.setMaximumSize(new Dimension(26, 26));
 		teclaZ.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaZ.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/Z_pressed.png")));
+		teclaZ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Z_pressed.png")));
 		teclaZ.setOpaque(false);
-		teclaZ.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaZ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaZ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaZ.setBounds(108, 579, 24, 28);
 		teclaZ.addActionListener(new ActionListener() {
@@ -632,9 +632,9 @@ public class principal extends JFrame {
 		teclaX.setMinimumSize(new Dimension(26, 26));
 		teclaX.setMaximumSize(new Dimension(26, 26));
 		teclaX.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaX.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/X_pressed.png")));
+		teclaX.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/X_pressed.png")));
 		teclaX.setOpaque(false);
-		teclaX.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaX.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaX.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaX.setBounds(134, 579, 24, 28);
 		teclaX.addActionListener(new ActionListener() {
@@ -658,9 +658,9 @@ public class principal extends JFrame {
 		teclaC.setMinimumSize(new Dimension(26, 26));
 		teclaC.setMaximumSize(new Dimension(26, 26));
 		teclaC.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaC.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/C_pressed.png")));
+		teclaC.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/C_pressed.png")));
 		teclaC.setOpaque(false);
-		teclaC.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaC.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaC.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaC.setBounds(160, 579, 24, 28);
 		teclaC.addActionListener(new ActionListener() {
@@ -684,9 +684,9 @@ public class principal extends JFrame {
 		teclaV.setMinimumSize(new Dimension(26, 26));
 		teclaV.setMaximumSize(new Dimension(26, 26));
 		teclaV.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaV.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/V_pressed.png")));
+		teclaV.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/V_pressed.png")));
 		teclaV.setOpaque(false);
-		teclaV.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaV.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaV.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaV.setBounds(185, 579, 24, 28);
 		teclaV.addActionListener(new ActionListener() {
@@ -710,9 +710,9 @@ public class principal extends JFrame {
 		teclaB.setMinimumSize(new Dimension(26, 26));
 		teclaB.setMaximumSize(new Dimension(26, 26));
 		teclaB.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaB.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/B_pressed.png")));
+		teclaB.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/B_pressed.png")));
 		teclaB.setOpaque(false);
-		teclaB.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaB.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaB.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaB.setBounds(211, 579, 24, 28);
 		teclaB.addActionListener(new ActionListener() {
@@ -736,9 +736,9 @@ public class principal extends JFrame {
 		teclaN.setMinimumSize(new Dimension(26, 26));
 		teclaN.setMaximumSize(new Dimension(26, 26));
 		teclaN.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaN.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/N_pressed.png")));
+		teclaN.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/N_pressed.png")));
 		teclaN.setOpaque(false);
-		teclaN.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaN.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaN.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaN.setBounds(236, 579, 24, 28);
 		teclaN.addActionListener(new ActionListener() {
@@ -762,9 +762,9 @@ public class principal extends JFrame {
 		teclaM.setMinimumSize(new Dimension(26, 26));
 		teclaM.setMaximumSize(new Dimension(26, 26));
 		teclaM.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaM.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/M_pressed.png")));
+		teclaM.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/M_pressed.png")));
 		teclaM.setOpaque(false);
-		teclaM.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaM.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaM.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaM.setBounds(262, 579, 24, 28);
 		teclaM.addActionListener(new ActionListener() {
@@ -789,9 +789,9 @@ public class principal extends JFrame {
 		teclaIntro.setMinimumSize(new Dimension(58, 26));
 		teclaIntro.setMaximumSize(new Dimension(58, 26));
 		teclaIntro.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaIntro.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/Intro_pressed.png")));
+		teclaIntro.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Intro_pressed.png")));
 		teclaIntro.setOpaque(false);
-		teclaIntro.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaIntro.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaIntro.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaIntro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -816,9 +816,9 @@ public class principal extends JFrame {
 		teclaF1.setMinimumSize(new Dimension(27, 27));
 		teclaF1.setMaximumSize(new Dimension(27, 27));
 		teclaF1.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaF1.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/F1pressed.png"))); //cambiar a nombre imagen
+		teclaF1.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F1pressed.png"))); //cambiar a nombre imagen
 		teclaF1.setOpaque(false);
-		teclaF1.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaF1.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaF1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaF1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -842,9 +842,9 @@ public class principal extends JFrame {
 		teclaF2.setMinimumSize(new Dimension(26, 26));
 		teclaF2.setMaximumSize(new Dimension(26, 26));
 		teclaF2.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaF2.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/F2pressed.png")));
+		teclaF2.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F2pressed.png")));
 		teclaF2.setOpaque(false);
-		teclaF2.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaF2.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaF2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaF2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -868,9 +868,9 @@ public class principal extends JFrame {
 		teclaF3.setMinimumSize(new Dimension(26, 26));
 		teclaF3.setMaximumSize(new Dimension(26, 26));
 		teclaF3.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaF3.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/F3pressed.png")));
+		teclaF3.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F3pressed.png")));
 		teclaF3.setOpaque(false);
-		teclaF3.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaF3.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaF3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaF3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -894,9 +894,9 @@ public class principal extends JFrame {
 		teclaF4.setMinimumSize(new Dimension(27, 26));
 		teclaF4.setMaximumSize(new Dimension(27, 26));
 		teclaF4.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaF4.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/F4pressed.png")));
+		teclaF4.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F4pressed.png")));
 		teclaF4.setOpaque(false);
-		teclaF4.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaF4.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaF4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaF4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -920,9 +920,9 @@ public class principal extends JFrame {
 		teclaEsc.setMinimumSize(new Dimension(27, 26));
 		teclaEsc.setMaximumSize(new Dimension(27, 26));
 		teclaEsc.setFont(new Font("Tahoma", Font.PLAIN, 5));
-		teclaEsc.setPressedIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaEsc.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaEsc.setOpaque(false);
-		teclaEsc.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tecla.png")));
+		teclaEsc.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaEsc.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		teclaEsc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -981,13 +981,13 @@ public class principal extends JFrame {
 		contentPane.add(lblPantallita);
 		
 		JLabel lblGato = new JLabel("gato");
-		lblGato.setIcon(new ImageIcon(principal.class.getResource("/imagenes/gato.gif")));
+		lblGato.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gato.gif")));
 		lblGato.setBounds(898, 290, 100, 70);
 		contentPane.add(lblGato);
 				
 		JLabel lblFondo = new JLabel("fondo");
 		lblFondo.setRequestFocusEnabled(false);
-		lblFondo.setIcon(new ImageIcon(principal.class.getResource("/imagenes/fondo2.png")));
+		lblFondo.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/fondo2.png")));
 		lblFondo.setBounds(0, 0, 1080, 675);
 		contentPane.add(lblFondo);
 		
@@ -1075,44 +1075,44 @@ public class principal extends JFrame {
 		switch (evento) {
 		
 		case 6:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas6.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas6.png")));
 			break;
 		case 5:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas5.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas5.png")));
 			break;
 		case 4:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas4.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas4.png")));
 			break;
 		case 3:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas3.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas3.png")));
 			break;
 			
 		case 2:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas2.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas2.png")));
 			break;
 
 		case 1:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas1.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas1.png")));
 			break;
 
 		case 0:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/vidas0.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas0.png")));
 			break;
 			
 		case 96:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/acierto.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/acierto.png")));
 			break;
 			
 		case 97:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/fallo.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/fallo.png")));
 			break;
 			
 		case 98:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/tuganas.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tuganas.png")));
 			break;
 			
 		case 99:
-			lblPantallita.setIcon(new ImageIcon(principal.class.getResource("/imagenes/gameover.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gameover.png")));
 			break;
 		}
 	}

@@ -43,11 +43,11 @@ package programa;
 
 import java.awt.AWTException;
 import java.awt.FontFormatException;
-import interfaz.principal;
+import interfaz.Principal;
 import programa.Dificultad;
 import programa.Palabra;
 
-public class proyecto {
+public class Juego {
 	
 	public static String palabraEscogida = "";
 	static String[] listaPalabras = new String[5];	
@@ -64,7 +64,7 @@ public class proyecto {
 		 * 	cargarPC para mostrar la secuencia de inicio del juego.
 		 */
 		
-		principal ventana = new principal();
+		Principal ventana = new Principal();
 		ventana.setVisible(true);
 		Inicio.cargarPC();
 
@@ -92,7 +92,7 @@ public class proyecto {
 			String letrasUsadas = "";
 			char[] palabraJuegoDefragmentada = palabra.toCharArray();
 			Palabra.cargarArray(palabraJuegoDefragmentada);
-			principal.muestraPantalla(vidas);
+			Principal.muestraPantalla(vidas);
 			
 			/* 	Juego del ahorcado:
 			 * 
@@ -104,7 +104,7 @@ public class proyecto {
 			while (Vidas.getFinalJuego() == false) {
 			
 				Palabra.muestraLetras(palabraJuegoDefragmentada);
-				principal.escribeTerminal("\nUsadas: " + letrasUsadas);
+				Principal.escribeTerminal("\nUsadas: " + letrasUsadas);
 				letraElegida = Palabra.introducirLetra(letrasUsadas);
 				letrasUsadas += letraElegida+",";
 				aciertos = Palabra.comprobarPalabra(palabra,letraElegida,palabraJuegoDefragmentada);

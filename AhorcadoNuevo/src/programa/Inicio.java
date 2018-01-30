@@ -4,7 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-import interfaz.principal;
+import interfaz.Principal;
 
 /**
  * 	Clase con la secuencia de inicio que se
@@ -19,56 +19,56 @@ public class Inicio {
 		
 		
 		
-		principal.escribeTerminal("ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»" 
+		Principal.escribeTerminal("ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»" 
 							  + "\nº MS-DAM Version 6.22 º"
 							  + "\nÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n");
 		Thread.sleep(800);
 
-		principal.escribeTerminal("\nCargando controladores..." + "\n");
+		Principal.escribeTerminal("\nCargando controladores..." + "\n");
 		Thread.sleep(2000);
-		principal.escribeTerminal("\nş KEYBOARD.SYS");
+		Principal.escribeTerminal("\nş KEYBOARD.SYS");
 		Thread.sleep(1500);
-		principal.escribeTerminal("\nş FLOPPY.SYS");
+		Principal.escribeTerminal("\nş FLOPPY.SYS");
 		Thread.sleep(2000);
-		principal.escribeTerminal("\nş TERMINAL.SYS");
+		Principal.escribeTerminal("\nş TERMINAL.SYS");
 		Thread.sleep(2000);
-		principal.escribeTerminal("\n\nCarga de controladores completada");
+		Principal.escribeTerminal("\n\nCarga de controladores completada");
 		Thread.sleep(1000);
-		principal.escribeTerminal("\n\n          Iniciando el sistema\n");
+		Principal.escribeTerminal("\n\n          Iniciando el sistema\n");
 		Thread.sleep(1000);
 		
 		for (int i=0; i<10;i++) {
-			principal.escribeTerminal("°");
+			Principal.escribeTerminal("°");
 			Thread.sleep(140);
 		}
 		
 		for (int j=0; j<10;j++) {
-			principal.escribeTerminal("±");
+			Principal.escribeTerminal("±");
 			Thread.sleep(130);
 		}
 		
 		for (int k=0; k<10;k++) {
-			principal.escribeTerminal("²");
+			Principal.escribeTerminal("²");
 			Thread.sleep(120);
 		}
 		
 		for (int j=0; j<11;j++) {
-			principal.escribeTerminal("Û");
+			Principal.escribeTerminal("Û");
 			Thread.sleep(100);
 		}
 		
-		principal.borrarTerminal();
-		principal.escribeTerminal("C:\\>");
+		Principal.borrarTerminal();
+		Principal.escribeTerminal("C:\\>");
 		Thread.sleep(1000);
 		r.keyPress(KeyEvent.VK_A);
 		r.keyRelease(KeyEvent.VK_A);
 		Thread.sleep(300);
-		principal.escribeTerminal(":");
+		Principal.escribeTerminal(":");
 		Thread.sleep(150);
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(1000);
-		principal.escribeTerminal("A:\\>");
+		Principal.escribeTerminal("A:\\>");
 		Thread.sleep(90);
 		r.keyPress(KeyEvent.VK_C);
 		r.keyRelease(KeyEvent.VK_C);
@@ -76,7 +76,7 @@ public class Inicio {
 		r.keyPress(KeyEvent.VK_D);
 		r.keyRelease(KeyEvent.VK_D);
 		Thread.sleep(90);
-		principal.escribeTerminal(" ");
+		Principal.escribeTerminal(" ");
 		Thread.sleep(50);
 		r.keyPress(KeyEvent.VK_S);
 		r.keyRelease(KeyEvent.VK_S);
@@ -105,7 +105,7 @@ public class Inicio {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(500);
-		principal.escribeTerminal("A:\\SOFTWARE>");
+		Principal.escribeTerminal("A:\\SOFTWARE>");
 		Thread.sleep(800);
 		r.keyPress(KeyEvent.VK_H);
 		r.keyRelease(KeyEvent.VK_H);
@@ -131,7 +131,7 @@ public class Inicio {
 		r.keyPress(KeyEvent.VK_L);
 		r.keyRelease(KeyEvent.VK_L);
 		Thread.sleep(120);
-		principal.escribeTerminal(".");
+		Principal.escribeTerminal(".");
 		Thread.sleep(120);
 		r.keyPress(KeyEvent.VK_E);
 		r.keyRelease(KeyEvent.VK_E);
@@ -142,16 +142,16 @@ public class Inicio {
 		r.keyPress(KeyEvent.VK_E);
 		r.keyRelease(KeyEvent.VK_E);
 		Thread.sleep(300);
-		principal.escribeTerminal("\nCargando password HACKTOOL v1.43");
+		Principal.escribeTerminal("\nCargando password HACKTOOL v1.43");
 		Thread.sleep(1000);
-		principal.escribeTerminal(".");
+		Principal.escribeTerminal(".");
 		Thread.sleep(900);
-		principal.escribeTerminal(".");
+		Principal.escribeTerminal(".");
 		Thread.sleep(900);
-		principal.escribeTerminal(".");
+		Principal.escribeTerminal(".");
 		Thread.sleep(1300);
-		principal.borrarTerminal();
-		principal.escribeTerminal(  "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n" + 
+		Principal.borrarTerminal();
+		Principal.escribeTerminal(  "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n" + 
 									"°  °°°°  °°°°°  °°°°°°°     °°°  °°°°  °°\n" + 
 									"±  ±±±±  ±±±±    ±±±±±  ±±±  ±±  ±±±  ±±±\n" + 
 									"±  ±±±±  ±±±  ±±  ±±±  ±±±±±±±±  ±±  ±±±±\n" + 
@@ -169,8 +169,8 @@ public class Inicio {
 		Thread.sleep(4000);
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
-		principal.borrarTerminal();
-		principal.escribeTerminal("ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»"
+		Principal.borrarTerminal();
+		Principal.escribeTerminal("ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»"
 							  + "\nº                                       º" 
 							  + "\nº    Bienvenido a password HACKTOOL     º"
 							  + "\nº                                       º" 

@@ -1,6 +1,6 @@
 package programa;
 
-import interfaz.principal;
+import interfaz.Principal;
 
 /**
  * 	Clase donde se define el array de palabras
@@ -14,8 +14,8 @@ public class Dificultad {
 		
 		String[] listaPalabras = new String[18];
 		
-		principal.borrarTerminal();
-		principal.escribeTerminal(  "ษอออออออออออออออออออออออออออออออออออออออป"
+		Principal.borrarTerminal();
+		Principal.escribeTerminal(  "ษอออออออออออออออออออออออออออออออออออออออป"
 								+ "\nบ                                       บ" 
 								+ "\nบ          Elige la dificultad          บ"
 								+ "\nบ                                       บ" 
@@ -33,7 +33,7 @@ public class Dificultad {
 
 		while (repetir == true) {
 
-			char dificultad = principal.leerLetra();
+			char dificultad = Principal.leerLetra();
 
 			
 			switch (dificultad) {
@@ -66,7 +66,7 @@ public class Dificultad {
 
 			}
 		}
-		principal.borrarTerminal();
+		Principal.borrarTerminal();
 		return listaPalabras;
 	}
 }

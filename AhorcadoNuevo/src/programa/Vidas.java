@@ -1,6 +1,6 @@
 package programa;
 
-import interfaz.principal;
+import interfaz.Principal;
 
 /**
  * 	Clase con los m้todos usados para el control
@@ -34,30 +34,30 @@ public class Vidas {
 		
 		if (aciertos == 0) {
 
-			principal.escribeTerminal("\n\nญNo se encuentra coincidencia!\n");
-			principal.muestraPantalla(97);
+			Principal.escribeTerminal("\n\nญNo se encuentra coincidencia!\n");
+			Principal.muestraPantalla(97);
 			Thread.sleep(1000);
-			principal.muestraPantalla(vidas);
-			principal.borrarTerminal();
+			Principal.muestraPantalla(vidas);
+			Principal.borrarTerminal();
 		}
 		
 		else if (aciertos == 1) {
 
-			principal.escribeTerminal("\n\nญ" +aciertos+ " coincidencia encontrada!\n");
-			principal.muestraPantalla(96);
+			Principal.escribeTerminal("\n\nญ" +aciertos+ " coincidencia encontrada!\n");
+			Principal.muestraPantalla(96);
 			Thread.sleep(1000);
-			principal.muestraPantalla(vidas);
-			principal.borrarTerminal();
+			Principal.muestraPantalla(vidas);
+			Principal.borrarTerminal();
 			
 		} 
 		
 		else if (aciertos > 1) {
 			
-			principal.escribeTerminal("\n\nญ" +aciertos+ " coincidencias encontradas!\n");
-			principal.muestraPantalla(96);
+			Principal.escribeTerminal("\n\nญ" +aciertos+ " coincidencias encontradas!\n");
+			Principal.muestraPantalla(96);
 			Thread.sleep(1000);
-			principal.muestraPantalla(vidas);
-			principal.borrarTerminal();
+			Principal.muestraPantalla(vidas);
+			Principal.borrarTerminal();
 			
 		}
 
@@ -67,9 +67,9 @@ public class Vidas {
 		
 		if (vidas == 0) {
 			finaljuego = true;
-			principal.muestraPantalla(vidas);
+			Principal.muestraPantalla(vidas);
 			Thread.sleep(1000);
-			principal.escribeTerminal("ษอออออออออออออออออออออออออออออออออออออออป"
+			Principal.escribeTerminal("ษอออออออออออออออออออออออออออออออออออออออป"
 								  + "\nบ                                       บ" 
 								  + "\nบ     ____ ____ ____ ____ ____ ____     บ" 
 								  + "\nบ     |__| |    |    |___ [__  [__      บ" 
@@ -84,34 +84,34 @@ public class Vidas {
 								  + "\nบ                                       บ"
 								  + "\nศอออออออออออออออออออออออออออออออออออออออผ\n");
 			
-			principal.muestraPantalla(99);
-			while (principal.leerLetra() != '\n') {
+			Principal.muestraPantalla(99);
+			while (Principal.leerLetra() != '\n') {
 			
-				principal.escribeTerminal("");
+				Principal.escribeTerminal("");
 			}
 
 		} if (vidas == 1) {
 			
-			principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
-			principal.escribeTerminal("      Te queda solo una oportunidad\n");
-			principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
+			Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
+			Principal.escribeTerminal("      Te queda solo una oportunidad\n");
+			Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
 			Thread.sleep(1000);
-			principal.borrarTerminal();
-			principal.muestraPantalla(vidas);
+			Principal.borrarTerminal();
+			Principal.muestraPantalla(vidas);
 			
 		} else {
 
-			principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
-			principal.escribeTerminal("        Te quedan " + vidas + " oportunidades\n");
-			principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
+			Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n");
+			Principal.escribeTerminal("        Te quedan " + vidas + " oportunidades\n");
+			Principal.escribeTerminal("ออออออออออออออออออออออออออออออออออออออออออ\n\n");
 			Thread.sleep(1000);
-			principal.borrarTerminal();
-			principal.muestraPantalla(vidas);
+			Principal.borrarTerminal();
+			Principal.muestraPantalla(vidas);
 		}
 		
 		if (palabra.length() == aciertostotales) {
 			finaljuego = true;
-			principal.escribeTerminal("ษอออออออออออออออออออออออออออออออออออออออป"
+			Principal.escribeTerminal("ษอออออออออออออออออออออออออออออออออออออออป"
 								  + "\nบ                                       บ" 
 								  + "\nบ     ____ ____ ____ ____ ____ ____     บ" 
 								  + "\nบ     |__| |    |    |___ [__  [__      บ" 
@@ -126,10 +126,10 @@ public class Vidas {
 								  + "\nบ                                       บ"
 								  + "\nศอออออออออออออออออออออออออออออออออออออออผ\n");
 
-			principal.muestraPantalla(98);
-				while (principal.leerLetra() != '\n') {
+			Principal.muestraPantalla(98);
+				while (Principal.leerLetra() != '\n') {
 			
-			principal.escribeTerminal("");
+			Principal.escribeTerminal("");
 			}
 			
 	
