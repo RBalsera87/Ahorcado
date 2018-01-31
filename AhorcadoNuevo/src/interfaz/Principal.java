@@ -13,6 +13,9 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.io.IOException;
 import java.io.InputStream;
 import java.awt.ComponentOrientation;
@@ -53,13 +56,14 @@ public class Principal extends JFrame {
 		});
 		
 	}
-
+	
 	/**
 	 *  CreaciÛn de la ventana principal.
 	 */
 	
 	public Principal() throws InterruptedException, FontFormatException {
 		
+		setAlwaysOnTop(true);		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1085, 703);
@@ -67,6 +71,21 @@ public class Principal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		/**
+		 *  Cursores nuevos del programa.
+		 */
+		
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		Image imgmano = new ImageIcon(Principal.class.getResource("/imagenes/mano.png")).getImage();		
+		Point pointmano = new Point(5, 0);
+		Cursor mano = toolkit.createCustomCursor(imgmano, pointmano, "mano");
+		
+		Image imgflecha = new ImageIcon(Principal.class.getResource("/imagenes/flecha.png")).getImage();		
+		Point pointflecha = new Point(0, 0);
+		Cursor flecha = toolkit.createCustomCursor(imgflecha, pointflecha, "flecha");
+		
+		setCursor(flecha);
 		
 		iniciaTerminal();
 		
@@ -89,7 +108,7 @@ public class Principal extends JFrame {
 		teclaQ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Q_pressed.png")));
 		teclaQ.setOpaque(false);
 		teclaQ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaQ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaQ.setCursor(mano);
 		teclaQ.setBounds(88, 530, 24, 28);
 		teclaQ.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -115,7 +134,7 @@ public class Principal extends JFrame {
 		teclaW.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/W_pressed.png")));
 		teclaW.setOpaque(false);
 		teclaW.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaW.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaW.setCursor(mano);
 		teclaW.setBounds(114, 530, 24, 28);
 		teclaW.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -141,7 +160,7 @@ public class Principal extends JFrame {
 		teclaE.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/E_pressed.png")));
 		teclaE.setOpaque(false);
 		teclaE.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaE.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaE.setCursor(mano);
 		teclaE.setBounds(139, 530, 24, 28);
 		teclaE.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -167,7 +186,7 @@ public class Principal extends JFrame {
 		teclaR.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/R_pressed.png")));
 		teclaR.setOpaque(false);
 		teclaR.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaR.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaR.setCursor(mano);
 		teclaR.setBounds(165, 530, 24, 28);
 		teclaR.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -193,7 +212,7 @@ public class Principal extends JFrame {
 		teclaT.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/T_pressed.png")));
 		teclaT.setOpaque(false);
 		teclaT.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaT.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaT.setCursor(mano);
 		teclaT.setBounds(190, 530, 24, 28);
 		teclaT.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -219,7 +238,7 @@ public class Principal extends JFrame {
 		teclaY.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Y_pressed.png")));
 		teclaY.setOpaque(false);
 		teclaY.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaY.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaY.setCursor(mano);
 		teclaY.setBounds(216, 530, 24, 28);
 		teclaY.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -245,7 +264,7 @@ public class Principal extends JFrame {
 		teclaU.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/U_pressed.png")));
 		teclaU.setOpaque(false);
 		teclaU.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaU.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaU.setCursor(mano);
 		teclaU.setBounds(242, 530, 24, 28);
 		teclaU.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -271,7 +290,7 @@ public class Principal extends JFrame {
 		teclaI.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/I_pressed.png")));
 		teclaI.setOpaque(false);
 		teclaI.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaI.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaI.setCursor(mano);
 		teclaI.setBounds(267, 530, 24, 28);
 		teclaI.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -297,7 +316,7 @@ public class Principal extends JFrame {
 		teclaO.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/O_pressed.png")));
 		teclaO.setOpaque(false);
 		teclaO.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaO.setCursor(mano);
 		teclaO.setBounds(292, 530, 24, 28);
 		teclaO.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -323,7 +342,7 @@ public class Principal extends JFrame {
 		teclaP.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/P_pressed.png")));
 		teclaP.setOpaque(false);
 		teclaP.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaP.setCursor(mano);
 		teclaP.setBounds(318, 530, 24, 28);
 		teclaP.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -349,7 +368,7 @@ public class Principal extends JFrame {
 		teclaA.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/A_pressed.png")));
 		teclaA.setOpaque(false);
 		teclaA.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaA.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaA.setCursor(mano);
 		teclaA.setBounds(95, 554, 24, 28);
 		teclaA.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -375,7 +394,7 @@ public class Principal extends JFrame {
 		teclaS.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/S_pressed.png")));
 		teclaS.setOpaque(false);
 		teclaS.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaS.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaS.setCursor(mano);
 		teclaS.setBounds(121, 554, 24, 28);
 		teclaS.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -401,7 +420,7 @@ public class Principal extends JFrame {
 		teclaD.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/D_pressed.png")));
 		teclaD.setOpaque(false);
 		teclaD.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaD.setCursor(mano);
 		teclaD.setBounds(146, 554, 24, 28);
 		teclaD.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -427,7 +446,7 @@ public class Principal extends JFrame {
 		teclaF.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F_pressed.png")));
 		teclaF.setOpaque(false);
 		teclaF.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaF.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaF.setCursor(mano);
 		teclaF.setBounds(172, 554, 24, 28);
 		teclaF.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -453,7 +472,7 @@ public class Principal extends JFrame {
 		teclaG.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/G_pressed.png")));
 		teclaG.setOpaque(false);
 		teclaG.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaG.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaG.setCursor(mano);
 		teclaG.setBounds(197, 554, 24, 28);
 		teclaG.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -479,7 +498,7 @@ public class Principal extends JFrame {
 		teclaH.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/H_pressed.png")));
 		teclaH.setOpaque(false);
 		teclaH.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaH.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaH.setCursor(mano);
 		teclaH.setBounds(223, 554, 24, 28);
 		teclaH.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -505,7 +524,7 @@ public class Principal extends JFrame {
 		teclaJ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/J_pressed.png")));
 		teclaJ.setOpaque(false);
 		teclaJ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaJ.setCursor(mano);
 		teclaJ.setBounds(249, 554, 24, 28);
 		teclaJ.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -531,7 +550,7 @@ public class Principal extends JFrame {
 		teclaK.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/K_pressed.png")));
 		teclaK.setOpaque(false);
 		teclaK.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaK.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaK.setCursor(mano);
 		teclaK.setBounds(274, 554, 24, 28);
 		teclaK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -557,7 +576,7 @@ public class Principal extends JFrame {
 		teclaL.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/L_pressed.png")));
 		teclaL.setOpaque(false);
 		teclaL.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaL.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaL.setCursor(mano);
 		teclaL.setBounds(300, 554, 24, 28);
 		teclaL.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -583,7 +602,7 @@ public class Principal extends JFrame {
 		tecla—.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/—_pressed.png")));
 		tecla—.setOpaque(false);
 		tecla—.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		tecla—.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		tecla—.setCursor(mano);
 		tecla—.setBounds(325, 554, 24, 28);
 		tecla—.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -609,7 +628,7 @@ public class Principal extends JFrame {
 		teclaZ.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Z_pressed.png")));
 		teclaZ.setOpaque(false);
 		teclaZ.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaZ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaZ.setCursor(mano);
 		teclaZ.setBounds(108, 579, 24, 28);
 		teclaZ.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -635,7 +654,7 @@ public class Principal extends JFrame {
 		teclaX.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/X_pressed.png")));
 		teclaX.setOpaque(false);
 		teclaX.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaX.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaX.setCursor(mano);
 		teclaX.setBounds(134, 579, 24, 28);
 		teclaX.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -661,7 +680,7 @@ public class Principal extends JFrame {
 		teclaC.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/C_pressed.png")));
 		teclaC.setOpaque(false);
 		teclaC.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaC.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaC.setCursor(mano);
 		teclaC.setBounds(160, 579, 24, 28);
 		teclaC.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -687,7 +706,7 @@ public class Principal extends JFrame {
 		teclaV.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/V_pressed.png")));
 		teclaV.setOpaque(false);
 		teclaV.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaV.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaV.setCursor(mano);
 		teclaV.setBounds(185, 579, 24, 28);
 		teclaV.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -713,7 +732,7 @@ public class Principal extends JFrame {
 		teclaB.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/B_pressed.png")));
 		teclaB.setOpaque(false);
 		teclaB.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaB.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaB.setCursor(mano);
 		teclaB.setBounds(211, 579, 24, 28);
 		teclaB.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -739,7 +758,7 @@ public class Principal extends JFrame {
 		teclaN.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/N_pressed.png")));
 		teclaN.setOpaque(false);
 		teclaN.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaN.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaN.setCursor(mano);
 		teclaN.setBounds(236, 579, 24, 28);
 		teclaN.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -765,7 +784,7 @@ public class Principal extends JFrame {
 		teclaM.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/M_pressed.png")));
 		teclaM.setOpaque(false);
 		teclaM.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaM.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaM.setCursor(mano);
 		teclaM.setBounds(262, 579, 24, 28);
 		teclaM.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -792,7 +811,7 @@ public class Principal extends JFrame {
 		teclaIntro.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/Intro_pressed.png")));
 		teclaIntro.setOpaque(false);
 		teclaIntro.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaIntro.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaIntro.setCursor(mano);
 		teclaIntro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("\n");
@@ -819,7 +838,7 @@ public class Principal extends JFrame {
 		teclaF1.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F1pressed.png"))); //cambiar a nombre imagen
 		teclaF1.setOpaque(false);
 		teclaF1.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaF1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaF1.setCursor(mano);
 		teclaF1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '1';
@@ -845,7 +864,7 @@ public class Principal extends JFrame {
 		teclaF2.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F2pressed.png")));
 		teclaF2.setOpaque(false);
 		teclaF2.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaF2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaF2.setCursor(mano);
 		teclaF2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '2';
@@ -871,7 +890,7 @@ public class Principal extends JFrame {
 		teclaF3.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F3pressed.png")));
 		teclaF3.setOpaque(false);
 		teclaF3.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaF3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaF3.setCursor(mano);
 		teclaF3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '3';
@@ -897,7 +916,7 @@ public class Principal extends JFrame {
 		teclaF4.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/F4pressed.png")));
 		teclaF4.setOpaque(false);
 		teclaF4.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaF4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaF4.setCursor(mano);
 		teclaF4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '4';
@@ -923,14 +942,14 @@ public class Principal extends JFrame {
 		teclaEsc.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		teclaEsc.setOpaque(false);
 		teclaEsc.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
-		teclaEsc.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		teclaEsc.setCursor(mano);
 		teclaEsc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	System.exit(0);
             }
         });
         getContentPane().add(teclaEsc);
-		teclaEsc.setBounds(0, 0, 27, 26);
+		teclaEsc.setBounds(50, 458, 27, 26);
 		contentPane.add(teclaEsc);
 		
 		/**
@@ -979,6 +998,11 @@ public class Principal extends JFrame {
 				
 		lblPantallita.setBounds(901, 148, 110, 108);
 		contentPane.add(lblPantallita);
+		
+		JLabel lblLuces = new JLabel("luces");
+		lblLuces.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/luces.gif")));
+		lblLuces.setBounds(161, 89, 31, 5);
+		contentPane.add(lblLuces);
 		
 		JLabel lblGato = new JLabel("gato");
 		lblGato.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gato.gif")));
