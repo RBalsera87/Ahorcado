@@ -116,6 +116,7 @@ public class Juego {
 			}
 			
 			/*
+			 * 
 			 *  Cuando el jugador gana o se le terminan las vidas se
 			 *  muestra una pantalla de final y se vuelve a iniciar el
 			 *  bucle, volviendo a la pantalla de seleccion de dificultad.
