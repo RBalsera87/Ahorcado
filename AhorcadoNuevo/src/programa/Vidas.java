@@ -22,6 +22,11 @@ public class Vidas {
 		return finaljuego;
 	}
 	
+	public static void setFinalJuego() {
+		
+		finaljuego = true;
+	}	
+		
 	public static int restarVidas(int aciertos, int vidas){
 		
 		if (aciertos == 0) {
@@ -134,8 +139,8 @@ public class Vidas {
 			
 	
 		}
-		
-		
+			
 	}
+	
 	
 }

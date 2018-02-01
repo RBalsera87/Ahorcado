@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextArea;
@@ -23,9 +24,13 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
+import javax.swing.UIManager;
 
 /**
  * 	Clase con la interfaz gráfica.
@@ -34,6 +39,7 @@ import java.awt.event.KeyAdapter;
 @SuppressWarnings("serial")
 public class Principal extends JFrame {
 	
+	private int posX=0,posY=0;
 	private static char letrapulsada = ' ';
 	private static JTextArea Terminal = new JTextArea();
 	private static JLabel lblPantallita = new JLabel("");
@@ -48,6 +54,7 @@ public class Principal extends JFrame {
 			public void run() {
 				try {
 					Principal frame = new Principal();
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -60,17 +67,40 @@ public class Principal extends JFrame {
 	/**
 	 *  Creación de la ventana principal.
 	 */
-	
+
 	public Principal() throws InterruptedException, FontFormatException {
 		
+		setUndecorated(true);
 		setAlwaysOnTop(true);		
 		setResizable(false);
+		getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.BLACK));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1085, 703);
+		setBounds(100, 100, 1080, 675);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		/**
+		 *  Listeners para mover la ventana.
+		 */
+		this.addMouseListener(new MouseAdapter()
+		{
+		   public void mousePressed(MouseEvent e)
+		   {
+		      posX=e.getX();
+		      posY=e.getY();
+		   }
+		});
+		this.addMouseMotionListener(new MouseAdapter()
+		{
+		     public void mouseDragged(MouseEvent evt)
+		     {
+				//Mientras se mantiene pulsado el raton la ventana se moverá con él		
+				setLocation (evt.getXOnScreen()-posX,evt.getYOnScreen()-posY);
+							
+		     }
+		});
 		
 		/**
 		 *  Cursores nuevos del programa.
@@ -995,7 +1025,105 @@ public class Principal extends JFrame {
 			}
 			
 		});
-				
+		
+		/**
+		 *  Código para el huevo de pascua ;)
+		 */
+		
+		JLabel lbleasteregg = new JLabel("");
+		lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		lbleasteregg.setBounds(901, 148, 110, 108);
+		contentPane.add(lbleasteregg);
+			
+		JButton botonR = new JButton("");
+		botonR.setRolloverEnabled(false);
+		botonR.setFocusable(false);
+		botonR.setRequestFocusEnabled(false);
+		botonR.setBackground(new Color(143, 188, 143));
+		botonR.setBorder(UIManager.getBorder("Button.border"));
+		botonR.setBounds(915, 371, 12, 16);
+		botonR.addMouseListener(new MouseListener() {
+
+		    public void mouseClicked(MouseEvent e) {}
+		    public void mouseEntered(MouseEvent e) {}
+		    public void mouseExited(MouseEvent e) {}
+		    public void mousePressed(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonR.png")));
+		    }
+		    public void mouseReleased(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    }
+		});
+	    contentPane.add(botonR);
+	    
+	    JButton botonS = new JButton("");
+		botonS.setRolloverEnabled(false);
+		botonS.setFocusable(false);
+		botonS.setRequestFocusEnabled(false);
+		botonS.setBackground(new Color(143, 188, 143));
+		botonS.setBorder(UIManager.getBorder("Button.border"));
+		botonS.setBounds(937, 371, 12, 16);
+		botonS.addMouseListener(new MouseListener() {
+
+		    public void mouseClicked(MouseEvent e) {}
+		    public void mouseEntered(MouseEvent e) {}
+		    public void mouseExited(MouseEvent e) {}
+		    public void mousePressed(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonS.png")));
+		    }
+		    public void mouseReleased(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    }
+		});
+	    contentPane.add(botonS);
+	    
+	    JButton botonF = new JButton("");
+		botonF.setRolloverEnabled(false);
+		botonF.setFocusable(false);
+		botonF.setRequestFocusEnabled(false);
+		botonF.setBackground(new Color(143, 188, 143));
+		botonF.setBorder(UIManager.getBorder("Button.border"));
+		botonF.setBounds(960, 371, 12, 16);
+		botonF.addMouseListener(new MouseListener() {
+
+		    public void mouseClicked(MouseEvent e) {}
+		    public void mouseEntered(MouseEvent e) {}
+		    public void mouseExited(MouseEvent e) {}
+		    public void mousePressed(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.png")));
+		    }
+		    public void mouseReleased(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    }
+		});
+	    contentPane.add(botonF);
+	    
+	    JButton botonP = new JButton("");
+		botonP.setRolloverEnabled(false);
+		botonP.setFocusable(false);
+		botonP.setRequestFocusEnabled(false);
+		botonP.setBackground(new Color(143, 188, 143));
+		botonP.setBorder(UIManager.getBorder("Button.border"));
+		botonP.setBounds(982, 371, 12, 16);
+		botonP.addMouseListener(new MouseListener() {
+
+		    public void mouseClicked(MouseEvent e) {}
+		    public void mouseEntered(MouseEvent e) {}
+		    public void mouseExited(MouseEvent e) {}
+		    public void mousePressed(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.png")));
+		    }
+		    public void mouseReleased(MouseEvent e) {
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    }
+		});
+	    contentPane.add(botonP);
+		
+	    /**
+		 *  Carga el resto de lainterfaz, incluyendo la pantalla
+		 *  de intentos y el fondo con sus animaciones.
+		 */
+	    
 		lblPantallita.setBounds(901, 148, 110, 108);
 		contentPane.add(lblPantallita);
 		

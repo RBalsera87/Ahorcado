@@ -48,13 +48,12 @@ import programa.Dificultad;
 import programa.Palabra;
 
 public class Juego {
-	
-	public static String palabraEscogida = "";
-	static String[] listaPalabras = new String[5];	
+		
+	static String[] listaPalabras = new String[18];
 	
 	public static void main(String[] args) throws InterruptedException, FontFormatException, AWTException {
-
-		boolean salir = false;
+		
+		boolean repetir = true;
 		char letraElegida = ' ';
 		int aciertos, aciertostotales = 0;
 		
@@ -66,6 +65,7 @@ public class Juego {
 		
 		Principal ventana = new Principal();
 		ventana.setVisible(true);
+		ventana.setLocationRelativeTo(null); //Centra la ventana principal
 		Inicio.cargarPC();
 
 		/* 	Núcleo del juego:
@@ -122,7 +122,7 @@ public class Juego {
 			 *  bucle, volviendo a la pantalla de seleccion de dificultad.
 			 */
 			
-		} while (salir == false);
+		} while (repetir);
 		
 	}
 
