@@ -108,7 +108,7 @@ public class Principal extends JFrame {
 		
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Image imgmano = new ImageIcon(Principal.class.getResource("/imagenes/mano.png")).getImage();		
-		Point pointmano = new Point(5, 0);
+		Point pointmano = new Point(7, 0);
 		Cursor mano = toolkit.createCustomCursor(imgmano, pointmano, "mano");
 		
 		Image imgflecha = new ImageIcon(Principal.class.getResource("/imagenes/flecha.png")).getImage();		
@@ -1036,6 +1036,7 @@ public class Principal extends JFrame {
 		contentPane.add(lbleasteregg);
 			
 		JButton botonR = new JButton("");
+		botonR.setCursor(mano);
 		botonR.setRolloverEnabled(false);
 		botonR.setFocusable(false);
 		botonR.setRequestFocusEnabled(false);
@@ -1057,6 +1058,7 @@ public class Principal extends JFrame {
 	    contentPane.add(botonR);
 	    
 	    JButton botonS = new JButton("");
+	    botonS.setCursor(mano);
 		botonS.setRolloverEnabled(false);
 		botonS.setFocusable(false);
 		botonS.setRequestFocusEnabled(false);
@@ -1078,6 +1080,7 @@ public class Principal extends JFrame {
 	    contentPane.add(botonS);
 	    
 	    JButton botonF = new JButton("");
+	    botonF.setCursor(mano);
 		botonF.setRolloverEnabled(false);
 		botonF.setFocusable(false);
 		botonF.setRequestFocusEnabled(false);
@@ -1099,6 +1102,7 @@ public class Principal extends JFrame {
 	    contentPane.add(botonF);
 	    
 	    JButton botonP = new JButton("");
+	    botonP.setCursor(mano);
 		botonP.setRolloverEnabled(false);
 		botonP.setFocusable(false);
 		botonP.setRequestFocusEnabled(false);
@@ -1131,6 +1135,11 @@ public class Principal extends JFrame {
 		lblLuces.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/luces.gif")));
 		lblLuces.setBounds(161, 89, 31, 5);
 		contentPane.add(lblLuces);
+		
+		JLabel lblDormido = new JLabel("dormido");
+		lblDormido.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/dormido.gif")));
+		lblDormido.setBounds(200, 225, 71, 68);
+		contentPane.add(lblDormido);
 		
 		JLabel lblGato = new JLabel("gato");
 		lblGato.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gato.gif")));
