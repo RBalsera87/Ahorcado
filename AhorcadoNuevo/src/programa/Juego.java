@@ -115,7 +115,7 @@ public class Juego {
 			
 			}
 			
-			/*
+			/*  Final:
 			 * 
 			 *  Cuando el jugador gana o se le terminan las vidas se
 			 *  muestra una pantalla de final y se vuelve a iniciar el
