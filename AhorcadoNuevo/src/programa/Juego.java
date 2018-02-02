@@ -30,12 +30,13 @@
 	 * 
 	 * 	Algunas de las mejoras introducidas en el juego son:
 	 * 	
-	 * 	- Una interfaz gráfica amigable, con animaciones y secuencia de introducción.
+	 * 	- Una interfaz gráfica amigable, con secuencia de introducción y animaciones.
 	 * 	- Entrada dual, puede usarse tanto el teclado fisico y como el de la interfaz.
-	 * 	- Implementados distintos niveles de dificultad, con 18 palabras en cada uno.
+	 * 	- Implementados cuatro niveles de dificultad, con 18 palabras en cada uno.
 	 * 	- Las letras usadas se guardan con dos funciones, impedir que se introduzca dos veces la
 	 * 	  misma letra y tambien la de mostrárselas al usuario durante el juego.
 	 *  - En cualquier momento se puede salir del juego pulsando la tecla Escape.
+	 *  - Huevos de pascua
 	 *  
 	 */
 

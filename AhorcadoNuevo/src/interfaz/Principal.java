@@ -1049,7 +1049,7 @@ public class Principal extends JFrame {
 		    public void mouseEntered(MouseEvent e) {}
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
-		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonR.png")));
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonR.gif")));
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
@@ -1071,7 +1071,7 @@ public class Principal extends JFrame {
 		    public void mouseEntered(MouseEvent e) {}
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
-		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonS.png")));
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonS.gif")));
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
@@ -1093,7 +1093,7 @@ public class Principal extends JFrame {
 		    public void mouseEntered(MouseEvent e) {}
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
-		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.png")));
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.gif")));
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
@@ -1115,7 +1115,7 @@ public class Principal extends JFrame {
 		    public void mouseEntered(MouseEvent e) {}
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
-		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonP.png")));
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonP.gif")));
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
@@ -1236,24 +1236,24 @@ public class Principal extends JFrame {
 		switch (evento) {
 		
 		case 6:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas6.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas6.gif")));
 			break;
 		case 5:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas5.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas5.gif")));
 			break;
 		case 4:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas4.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas4.gif")));
 			break;
 		case 3:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas3.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas3.gif")));
 			break;
 			
 		case 2:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas2.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas2.gif")));
 			break;
 
 		case 1:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas1.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/vidas1.gif")));
 			break;
 
 		case 0:
@@ -1269,11 +1269,11 @@ public class Principal extends JFrame {
 			break;
 			
 		case 98:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tuganas.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tuganas.gif")));
 			break;
 			
 		case 99:
-			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gameover.png")));
+			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gameover.gif")));
 			break;
 		}
 	}

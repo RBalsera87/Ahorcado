@@ -5,7 +5,7 @@ import interfaz.Principal;
 /**
  * 	Clase donde se define el array de palabras
  * 	correspondiente a la dificultad que el
- *  jugador elija.
+ *  jugador haya elegido.
  */
 
 public class Dificultad {
@@ -22,7 +22,7 @@ public class Dificultad {
 								+ "\nº        Pulsa [F1] nivel Facil         º"
 								+ "\nº        Pulsa [F2] nivel Normal        º" 
 								+ "\nº        Pulsa [F3] nivel Dificil       º"
-								+ "\nº        Pulsa [F4] nivel Emilio        º"
+								+ "\nº        Pulsa [F4] nivel Extremo       º"
 								+ "\nº                                       º"
 								+ "\nº                                       º" 
 								+ "\nº        Pulsa Escape para salir        º"
