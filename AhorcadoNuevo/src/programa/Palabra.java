@@ -109,7 +109,7 @@ public class Palabra {
 				}
 			}			
 			
-			if (letraElegidaPorUsuario != ' ') {
+			if (letraElegidaPorUsuario != ' ' && letraElegidaPorUsuario != '\n' && letraElegidaPorUsuario != '1' && letraElegidaPorUsuario != '2' && letraElegidaPorUsuario != '3' && letraElegidaPorUsuario != '4') {
 
 				ejecutar = true;
 
