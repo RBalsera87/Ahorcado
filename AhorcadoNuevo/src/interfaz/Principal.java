@@ -1115,7 +1115,7 @@ public class Principal extends JFrame {
 		    public void mouseEntered(MouseEvent e) {}
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
-		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.png")));
+		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonP.png")));
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
@@ -1124,7 +1124,7 @@ public class Principal extends JFrame {
 	    contentPane.add(botonP);
 		
 	    /**
-		 *  Carga el resto de lainterfaz, incluyendo la pantalla
+		 *  Carga el resto de la interfaz, incluyendo la pantalla
 		 *  de intentos y el fondo con sus animaciones.
 		 */
 	    
