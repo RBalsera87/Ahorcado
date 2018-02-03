@@ -15,10 +15,9 @@ public class Inicio {
 
 	public static void cargarPC() throws InterruptedException, AWTException {
 
+		//Este Robot pulsa las teclas al inicio
 		Robot r = new Robot();
-		
-		
-		
+				
 		Principal.escribeTerminal("ษอออออออออออออออออออออป" 
 							  + "\nบ MS-DAM Version 6.22 บ"
 							  + "\nศอออออออออออออออออออออผ\n");
