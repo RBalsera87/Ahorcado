@@ -636,8 +636,8 @@ public class Principal extends JFrame {
 		tecla—.setBounds(325, 554, 24, 28);
 		tecla—.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Terminal.append("~");
-                letrapulsada = '—';
+                Terminal.append("•");
+                letrapulsada = '•';
             }
         });
         getContentPane().add(tecla—);

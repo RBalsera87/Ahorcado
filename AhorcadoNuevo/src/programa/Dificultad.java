@@ -19,14 +19,14 @@ public class Dificultad {
 								+ "\nบ                                       บ" 
 								+ "\nบ          Elige la dificultad          บ"
 								+ "\nบ                                       บ" 
-								+ "\nบ        Pulsa [F1] nivel Facil         บ"
+								+ "\nบ        Pulsa [F1] nivel F cil         บ"
 								+ "\nบ        Pulsa [F2] nivel Normal        บ" 
 								+ "\nบ        Pulsa [F3] nivel Dificil       บ"
 								+ "\nบ        Pulsa [F4] nivel Extremo       บ"
 								+ "\nบ                                       บ"
 								+ "\nบ                                       บ" 
 								+ "\nบ        Pulsa Escape para salir        บ"
-								+ "\nบ         en cualquier momento.         บ" 
+								+ "\nบ         en cualquier momento.         บ"
 								+ "\nบ                                       บ"
 								+ "\nศอออออออออออออออออออออออออออออออออออออออผ");
 		boolean repetir = true;
