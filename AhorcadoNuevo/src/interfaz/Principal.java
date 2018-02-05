@@ -1033,16 +1033,20 @@ public class Principal extends JFrame {
 		 */
 		
 		JButton btnGitHub = new JButton("");
+		btnGitHub.setVerticalTextPosition(SwingConstants.TOP);
+		btnGitHub.setVerticalAlignment(SwingConstants.TOP);
 		btnGitHub.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		btnGitHub.setContentAreaFilled(false);
 		btnGitHub.setBorderPainted(false);
-		btnGitHub.setBounds(702, 577, 113, 98);
+		btnGitHub.setBounds(701, 577, 113, 98);
 		btnGitHub.setRequestFocusEnabled(false);
 		btnGitHub.setFocusPainted(false);
 		btnGitHub.setBorder(null);
+		btnGitHub.setHorizontalAlignment(SwingConstants.LEFT);
+		btnGitHub.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnGitHub.setMinimumSize(new Dimension(113, 98));
 		btnGitHub.setMaximumSize(new Dimension(113, 98));
-		btnGitHub.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		btnGitHub.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonGit.png")));
 		btnGitHub.setOpaque(false);
 		btnGitHub.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
 		btnGitHub.setCursor(mano);
