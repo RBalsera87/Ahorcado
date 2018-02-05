@@ -70,6 +70,7 @@ public class Principal extends JFrame {
 
 	public Principal() throws InterruptedException, FontFormatException {
 		
+		setTitle("Ahorcado 2K18");		
 		setUndecorated(true);
 		setAlwaysOnTop(true);		
 		setResizable(false);
@@ -84,6 +85,7 @@ public class Principal extends JFrame {
 		/**
 		 *  Listeners para mover la ventana.
 		 */
+		
 		this.addMouseListener(new MouseAdapter()
 		{
 		   public void mousePressed(MouseEvent e)
@@ -1025,6 +1027,37 @@ public class Principal extends JFrame {
 			}
 			
 		});
+		
+		/**
+		 *  Boton con el enlace al proyecto de GitHub
+		 */
+		
+		JButton btnGitHub = new JButton("");
+		btnGitHub.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		btnGitHub.setContentAreaFilled(false);
+		btnGitHub.setBorderPainted(false);
+		btnGitHub.setBounds(702, 577, 113, 98);
+		btnGitHub.setRequestFocusEnabled(false);
+		btnGitHub.setFocusPainted(false);
+		btnGitHub.setBorder(null);
+		btnGitHub.setMinimumSize(new Dimension(113, 98));
+		btnGitHub.setMaximumSize(new Dimension(113, 98));
+		btnGitHub.setPressedIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		btnGitHub.setOpaque(false);
+		btnGitHub.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		btnGitHub.setCursor(mano);
+		btnGitHub.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	String url =  "https://github.com/RBalsera87/Ahorcado/";
+            	try {
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+            }
+        });
+		contentPane.add(btnGitHub);
 		
 		/**
 		 *  Código para el huevo de pascua ;)
