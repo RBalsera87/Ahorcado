@@ -50,7 +50,7 @@ import programa.Palabra;
 
 public class Juego {
 		
-	static String[] listaPalabras = new String[18];
+	private static String[] listaPalabras = new String[18];
 	
 	public static void main(String[] args) throws InterruptedException, FontFormatException, AWTException {
 		
