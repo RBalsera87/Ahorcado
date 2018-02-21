@@ -67,6 +67,7 @@ public class Juego {
 		Principal ventana = new Principal();
 		ventana.setVisible(true);
 		ventana.setLocationRelativeTo(null); //Centra la ventana principal
+		ventana.PlaySound("/resources/inicio.wav");
 		Inicio.cargarPC();
 
 		/* 	Núcleo del juego:

@@ -6,8 +6,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.Color;
 import javax.swing.JTextArea;
 import java.awt.Cursor;
@@ -17,8 +23,15 @@ import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
@@ -44,9 +57,10 @@ public class Principal extends JFrame {
 	private static JTextArea Terminal = new JTextArea();
 	private static JLabel lblPantallita = new JLabel("");
 	private JPanel contentPane;
+	private Clip clip;
 
 	/**
-	 *  Carga de la aplicación.
+	 *  Metodo main para probar la interfaz por separado.
 	 */
 	
 	public static void main(String[] args) {
@@ -56,10 +70,13 @@ public class Principal extends JFrame {
 					Principal frame = new Principal();
 					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
+			
+			
 		});
 		
 	}
@@ -82,6 +99,9 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		
+		 
 		/**
 		 *  Listeners para mover la ventana.
 		 */
@@ -146,6 +166,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("Q");
                 letrapulsada = 'Q';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaQ);
@@ -172,6 +193,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("W");
                 letrapulsada = 'W';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaW);
@@ -198,6 +220,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("E");
                 letrapulsada = 'E';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaE);
@@ -224,6 +247,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("R");
                 letrapulsada = 'R';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaR);
@@ -250,6 +274,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("T");
                 letrapulsada = 'T';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaT);
@@ -276,6 +301,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("Y");
                 letrapulsada = 'Y';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaY);
@@ -302,6 +328,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("U");
                 letrapulsada = 'U';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaU);
@@ -328,6 +355,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("I");
                 letrapulsada = 'I';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaI);
@@ -354,6 +382,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("O");
                 letrapulsada = 'O';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaO);
@@ -380,6 +409,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("P");
                 letrapulsada = 'P';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaP);
@@ -406,6 +436,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("A");
                 letrapulsada = 'A';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaA);
@@ -432,6 +463,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("S");
                 letrapulsada = 'S';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaS);
@@ -458,6 +490,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("D");
                 letrapulsada = 'D';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaD);
@@ -484,6 +517,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("F");
                 letrapulsada = 'F';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaF);
@@ -510,6 +544,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("G");
                 letrapulsada = 'G';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaG);
@@ -536,6 +571,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("H");
                 letrapulsada = 'H';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaH);
@@ -562,6 +598,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("J");
                 letrapulsada = 'J';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaJ);
@@ -588,6 +625,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("K");
                 letrapulsada = 'K';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaK);
@@ -614,6 +652,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("L");
                 letrapulsada = 'L';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaL);
@@ -640,6 +679,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("¥");
                 letrapulsada = '¥';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaÑ);
@@ -666,6 +706,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("Z");
                 letrapulsada = 'Z';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaZ);
@@ -692,6 +733,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("X");
                 letrapulsada = 'X';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaX);
@@ -718,6 +760,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("C");
                 letrapulsada = 'C';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaC);
@@ -744,6 +787,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("V");
                 letrapulsada = 'V';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaV);
@@ -770,6 +814,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("B");
                 letrapulsada = 'B';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaB);
@@ -796,6 +841,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("N");
                 letrapulsada = 'N';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaN);
@@ -822,6 +868,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("M");
                 letrapulsada = 'M';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaM);
@@ -848,6 +895,7 @@ public class Principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Terminal.append("\n");
                 letrapulsada = '\n';
+                PlaySound("/resources/enter.wav");
             }
         });
         getContentPane().add(teclaIntro);
@@ -874,6 +922,7 @@ public class Principal extends JFrame {
 		teclaF1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '1';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaF1);
@@ -900,6 +949,7 @@ public class Principal extends JFrame {
 		teclaF2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '2';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaF2);
@@ -926,6 +976,7 @@ public class Principal extends JFrame {
 		teclaF3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '3';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaF3);
@@ -952,6 +1003,7 @@ public class Principal extends JFrame {
 		teclaF4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 letrapulsada = '4';
+                PlaySound(random());
             }
         });
         getContentPane().add(teclaF4);
@@ -977,6 +1029,7 @@ public class Principal extends JFrame {
 		teclaEsc.setCursor(mano);
 		teclaEsc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+            	PlaySound(random());
             	System.exit(0);
             }
         });
@@ -1052,6 +1105,7 @@ public class Principal extends JFrame {
 		btnGitHub.setCursor(mano);
 		btnGitHub.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+            	PlaySound("/resources/Ring.wav");
             	String url =  "https://github.com/RBalsera87/Ahorcado/";
             	try {
 					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
@@ -1087,9 +1141,11 @@ public class Principal extends JFrame {
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonR.gif")));
+		    	PlaySound(randomSecret());
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    	StopSound();
 		    }
 		});
 	    contentPane.add(botonR);
@@ -1109,9 +1165,11 @@ public class Principal extends JFrame {
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonS.gif")));
+		    	PlaySound(randomSecret());
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    	StopSound();
 		    }
 		});
 	    contentPane.add(botonS);
@@ -1131,9 +1189,11 @@ public class Principal extends JFrame {
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonF.gif")));
+		    	PlaySound(randomSecret());
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    	StopSound();
 		    }
 		});
 	    contentPane.add(botonF);
@@ -1153,9 +1213,11 @@ public class Principal extends JFrame {
 		    public void mouseExited(MouseEvent e) {}
 		    public void mousePressed(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/BotonP.gif")));
+		    	PlaySound(randomSecret());
 		    }
 		    public void mouseReleased(MouseEvent e) {
 		    	lbleasteregg.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/tecla.png")));
+		    	StopSound();
 		    }
 		});
 	    contentPane.add(botonP);
@@ -1313,6 +1375,46 @@ public class Principal extends JFrame {
 			lblPantallita.setIcon(new ImageIcon(Principal.class.getResource("/imagenes/gameover.gif")));
 			break;
 		}
+	}
+	
+	public void PlaySound(String filename) {
+        try (InputStream in = getClass().getResourceAsStream(filename)) {
+            InputStream bufferedIn = new BufferedInputStream(in);
+            try (AudioInputStream audioIn = AudioSystem.getAudioInputStream(bufferedIn)) {
+                clip = AudioSystem.getClip();
+                clip.open(audioIn);
+                clip.start();
+            }
+        } catch (Exception e) {
+           e.printStackTrace();
+       }
+    }
+	
+	public void StopSound() {
+		clip.stop();
+	}
+	
+	
+	
+	public String random() {
+		List<String> list = new ArrayList<String>();
+		list.add("/resources/tecla1.wav");
+		list.add("/resources/tecla2.wav");
+		list.add("/resources/tecla3.wav");
+		String random = list.get(new Random().nextInt(list.size()));
+		
+		return random;
+	}
+	
+	public String randomSecret() {
+		List<String> list = new ArrayList<String>();
+		list.add("/resources/cena.wav");
+		list.add("/resources/police.wav");
+		list.add("/resources/runnin.wav");
+		list.add("/resources/smoke.wav");
+		String random = list.get(new Random().nextInt(list.size()));
+		
+		return random;
 	}
 }
 
